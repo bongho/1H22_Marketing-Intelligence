@@ -1,0 +1,16 @@
+---
+title: "Time Series Model"
+output: html_notebook
+---
+$y_t = 866 + 0.4961y_{t-1} - 0.3152y_{t-2}$
+
+```{r arima practice}
+library(tidyverse)
+df <- read_csv("./data/sales_pr.csv")
+
+fit <- Arima(df$sales,order=c(2,0,0))
+fit
+```
+```{r }
+
+```
